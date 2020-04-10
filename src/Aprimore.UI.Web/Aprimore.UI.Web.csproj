@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GitHub" Version="1.21.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aprimori.ApplicationCore\Aprimori.ApplicationCore.csproj" />
+    <ProjectReference Include="..\Aprimori.Infrastructure\Aprimori.Infrastructure.csproj" />
+  </ItemGroup>
+
+
+
+</Project>
