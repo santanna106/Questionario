@@ -18,5 +18,10 @@ namespace Aprimori.ApplicationCore.Entity
         public string Cpf { get; set; }
 
         public ICollection<Contato> Contatos { get; set; }
+
+        public Endereco Endereco { get; set; }
+
+
+        public ICollection<ProfissaoCliente> ProfissaoClientes { get; set; }
     }
 }
