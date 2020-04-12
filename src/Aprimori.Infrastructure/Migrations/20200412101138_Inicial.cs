@@ -21,26 +21,6 @@ namespace Aprimori.Infrastructure.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Menu",
-                columns: table => new
-                {
-                    Id = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Titulo = table.Column<string>(nullable: true),
-                    MenuId = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Menu", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Menu_Menu_MenuId",
-                        column: x => x.MenuId,
-                        principalTable: "Menu",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Profissao",
                 columns: table => new
                 {
@@ -138,11 +118,6 @@ namespace Aprimori.Infrastructure.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_Menu_MenuId",
-                table: "Menu",
-                column: "MenuId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_ProfissaoCliente_ClienteId",
                 table: "ProfissaoCliente",
                 column: "ClienteId");
@@ -160,9 +135,6 @@ namespace Aprimori.Infrastructure.Migrations
 
             migrationBuilder.DropTable(
                 name: "Endereco");
-
-            migrationBuilder.DropTable(
-                name: "Menu");
 
             migrationBuilder.DropTable(
                 name: "ProfissaoCliente");
